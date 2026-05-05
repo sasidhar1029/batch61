@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Add/Update user</h2>
+	<form action="@{/save}" method="post" th:oject="${user}">
+		<input type="hidden" th:field="*{uid}"/>
+		Username:<input type="text" th:field="*{username}"/><br/>
+		
+		password:<input type="password" th:field="*{password}"/><br/>
+		
+		Email:<input type="email" th:field="*{email}"/><br/>
+		
+		Phone:<input type="number" th:field="*{phone}"/><br>
+		
+		<button type="submit">Save</button>
+	</form>
+</body>
+</html>

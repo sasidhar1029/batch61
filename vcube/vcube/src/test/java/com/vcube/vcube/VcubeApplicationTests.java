@@ -1,0 +1,13 @@
+package com.vcube.vcube;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class VcubeApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

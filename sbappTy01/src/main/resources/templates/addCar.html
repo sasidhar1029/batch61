@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add / Update Car</title>
+</head>
+
+<body>
+<h2>Add / Update Car</h2>
+<hr/>
+
+<form th:action="@{/save}" th:object="${car}" method="post">
+
+    <input type="hidden" th:field="*{chasis}"/>
+
+    Model: <input type="text" th:field="*{model}"/><br><br>
+    Brand: <input type="text" th:field="*{brand}"/><br><br>
+    Color: <input type="text" th:field="*{color}"/><br><br>
+    Price: <input type="number" th:field="*{price}"/><br><br>
+
+    <button type="submit">Save</button>
+</form>
+
+<br>
+<a href="/">⬅ Back to List</a>
+
+</body>
+</html>
